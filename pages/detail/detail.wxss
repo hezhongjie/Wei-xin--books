@@ -1,0 +1,17 @@
+Page,.contain{
+    width:100%;
+    height:100%;
+}
+.myScroll-view{
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+}
+
+.text{
+    padding:5px 10px;
+    font-size:13px;
+    line-height: 20px;
+    min-height:900px;
+    box-sizing: border-box;
+}

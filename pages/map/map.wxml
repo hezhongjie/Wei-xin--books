@@ -1,0 +1,5 @@
+<view class="contain">
+    <view>
+        <button type="primary" hover-class="button-hover" bindtap="handleLocation">地理位置</button>
+    </view>
+</view>

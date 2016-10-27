@@ -1,0 +1,9 @@
+<view class="contain">
+    <scroll-view scroll-y="true" bindscrolltoupper="handleLoadingAgin" class="myScroll-view">
+        <view hidden="{{isLoadingAginHidden}}">
+            <button loading="true"></button>
+        </view>
+        <view class="text">{{text}}</view>
+    </scroll-view>
+    <loading hidden="{{isHidden}}">加载中……</loading>
+</view>

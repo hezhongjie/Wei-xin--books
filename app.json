@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/photo/photo",
+    "pages/map/map"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+      "selectedColor":"#14c154",
+      "list":[
+        {
+          "pagePath":"pages/index/index",
+          "text":"主页",
+          "iconPath":"images/home.png",
+          "selectedIconPath":"images/home_light.png"
+        }
+        ,
+      {
+        "pagePath": "pages/photo/photo",
+        "text": "硬件",
+        "iconPath": "images/camera.png",
+        "selectedIconPath": "images/camera_light.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search_light.png"
+      }
+      ]
+  }
+
+}

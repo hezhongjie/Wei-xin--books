@@ -1,0 +1,46 @@
+<view class="contain">
+  <view class="nav">
+    <ul bindtap="handleNav">
+        <li class="{{currentIndex==0?'active':''}}" data-item='0'>第一页</li>
+        <li class="{{currentIndex==1?'active':''}}" data-item='1'>第二页</li>
+        <li class="{{currentIndex==2?'active':''}}" data-item='2'>第三页</li>
+    </ul>
+  </view>
+  <swiper bindchange="handleSwiperChange" current="{{currentIndex}}">
+      <swiper-item class="myswiper-item">
+          <scroll-view scroll-y="true" class="myScroll-view" bindscrolltoupper="handleLoadingAgin">
+              <view hidden="{{isIndex1HiddenLoading}}">
+                  <button loading="true"></button>
+              </view>
+              <view class="box" wx:for="{{books}}" wx:for-item="book" data-info="{{book.read}}">
+                  <view class="img"><image src="{{book.img}}" mode="aspectFill">{{book}}</image></view>
+                  <view class="information">
+                        <text class="title">{{book.alt}}</text>
+                        <text class="editor">{{book.editor}}</text>
+                        <text class="readnow" bindtap="handleRead" data-url="{{book.read}}">试读</text>                  
+                        <text class="update">{{book.update}}</text>
+                        <text class="introduce">{{book.introduce}}</text>
+                  </view>
+          
+              </view>
+          </scroll-view>
+      </swiper-item>
+      <swiper-item class="myswiper-item">
+          <scroll-view scroll-y="true" class="myScroll-view">
+            <view hidden="{{isIndex2HiddenLoading}}">
+                <button loading="true">正在加载</button>
+            </view>
+         
+          </scroll-view>
+      </swiper-item>
+      <swiper-item class="myswiper-item">
+             <scroll-view scroll-y="true" class="myScroll-view">
+          <view hidden="{{isIndex3HiddenLoading}}">
+              <button loading="true">正在加载</button>
+          </view>
+         
+          </scroll-view>
+      </swiper-item>
+  </swiper>
+  <loading hidden="{{isHidden}}">加载中……</loading>
+</view>
